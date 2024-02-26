@@ -45,7 +45,7 @@ public class AdminConfiguration {
                 .authorizeHttpRequests( author ->
                         author.requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                                 .requestMatchers("/admin/**").hasAuthority("ADMIN")
-//                                .requestMatchers("/forgot-password", "/register", "/register-new").permitAll()
+                                .requestMatchers("/forgot-password", "/register", "/register-new").permitAll()
                                 .anyRequest().authenticated()
 
                 )
